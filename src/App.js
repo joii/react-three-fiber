@@ -3,7 +3,7 @@ import { Canvas, useLoader } from '@react-three/fiber'
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader'
 
 export default function App() {
-  const gltf = useLoader(GLTFLoader, '/glbf/shoe.glb')
+  const gltf = useLoader(GLTFLoader, '/models/shirt.glb')
 
   return (
    <div className='content-area'>
