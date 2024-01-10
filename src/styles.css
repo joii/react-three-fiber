@@ -22,7 +22,7 @@ body,
 }
 
 body {
-  background: #f0f0f0;
+  background: #ffffff;
   font-family: 'Inter', sans-serif;
 }
 
@@ -223,4 +223,18 @@ button:hover {
 
 .exit:hover {
   box-shadow: inset -250px 0 0 0 black;
+}
+
+
+.picker {
+  position: absolute !important;
+  top: 74px;
+  left: 30%;
+  width: 90px !important;
+  height: 90px !important;
+}
+
+.ColorPicker{
+
+  color: black;
 }
