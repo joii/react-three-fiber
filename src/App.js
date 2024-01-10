@@ -1,26 +1,34 @@
-import { Stats, OrbitControls } from '@react-three/drei'
-import { Canvas, useLoader } from '@react-three/fiber'
-import { GLTFLoader } from 'three/addons/loaders/GLTFLoader'
+import { Canvas } from '@react-three/fiber'
+import { Stats, OrbitControls, Environment, useGLTF } from '@react-three/drei'
+import { useControls } from 'leva'
+
+const Models = [{title:'Shoe',url:'./models/shirt.glb'}]
+
+function Model({url}){
+  const {scene} = useGLTF(url)
+  return <primitive object={scene} />
+}
 
 export default function App() {
-  const gltf = useLoader(GLTFLoader, '/models/shirt.glb')
+  const { title } = useControls({
+    title: {
+      options: Models.map(({ title }) => title),
+    },
+  })
 
   return (
-   <div className='content-area'>
-   <Canvas camera={{ position: [0, 0, 2] }} 
-   size={[`1000px`,`1000px`]}
-   style={{width: `100%`, height: `auto`, position: `relative` }}>
+    <>
+      <Canvas camera={{ position: [0, 0, -0.2], near: 0.025 }}>
      
-   <primitive
-     object={gltf.scene}
-     position={[0, 0, 0]}
-     children-0-castShadow
-   />
-   
-   <OrbitControls target={[0, 1, 0]} />
-   <axesHelper args={[20]} />
-   <Stats />
- </Canvas>
-   </div>
+        <group>
+          <Model
+            url={Models[Models.findIndex((m) => m.title === title)].url}
+          />
+        </group>
+        <OrbitControls autoRotate />
+        <Stats />
+      </Canvas>
+      <span id="info">The {title} is selected.</span>
+    </>
   )
 }
