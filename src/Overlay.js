@@ -67,10 +67,10 @@ function Customizer() {
           ))}
         </div>
        
-        <button className="share" style={{ background: snap.selectedColor }}>
+       {/*} <button className="share" style={{ background: snap.selectedColor }}>
           DOWNLOAD
           <AiFillCamera size="1.3em" />
-        </button>
+          </button>*/}
         <button
           className="exit"
           style={{ background: snap.selectedColor }}
