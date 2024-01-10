@@ -97,17 +97,10 @@ section {
   font-family: 'Nunito Sans', sans-serif;
 }
 
-@media only screen and (max-width: 600px) {
-  .section--container h1{
-    line-height: 1vh !important;
-    width: 100%;
-  }
-}
-
 .support--content {
   position: relative;
-  top: -25%;
-  left: 300px;
+  top: -15%;
+  left: 40%;
 }
 
 .support--content p {
@@ -115,6 +108,28 @@ section {
   margin-bottom: 48px;
   line-height: 1.5rem;
 }
+
+@media only screen and (max-width: 600px) {
+  .section--container h1{
+    line-height: 1vh !important;
+    width: 100%;
+  }
+
+  .support--content {
+    position: relative;
+    top: -5%;
+    left: 2%;
+    
+  }
+
+  .support--content p {
+    width: 300px;
+
+  }
+
+}
+
+
 
 .bg {
   position: absolute;

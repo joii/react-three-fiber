@@ -36,11 +36,15 @@ function Intro() {
       <div className="section--container">
         <div>
           <h1>HEAVY by YOU</h1>
+         
         </div>
+       
         <div className="support--content">
+         
           <div>
+           
             <p>
-            Design your own shoes and take your style one step further, blending fashion and sport performance with a touch of your unique flair.
+            Design your own shoes and take your style one step further, blending fashion with a touch of your unique flair.
             </p>
             <button
               style={{ background: 'black' }}
@@ -66,7 +70,7 @@ function Customizer() {
       <Custom/>
       <button
       className="exit"
-      style={{ background: snap.selectedColor }}
+      style={{ background: 'black' }}
       onClick={() => (state.intro = true)}>
       GO BACK
       <AiOutlineArrowLeft size="1.3em" />
@@ -104,7 +108,7 @@ function CustomizerBak() {
         </button>
         <button
           className="exit"
-          style={{ background: snap.selectedColor }}
+          style={{ background: 'black' }}
           onClick={() => (state.intro = true)}>
           GO BACK
           <AiOutlineArrowLeft size="1.3em" />
