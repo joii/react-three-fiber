@@ -3,6 +3,9 @@ import { Canvas, useFrame } from "@react-three/fiber"
 import { useGLTF, ContactShadows, Environment, OrbitControls } from "@react-three/drei"
 import { HexColorPicker } from "react-colorful"
 import { proxy, useSnapshot } from "valtio"
+import './styles.css'
+
+
 
 const state = proxy({
   current: null,
@@ -10,7 +13,13 @@ const state = proxy({
 })
 
 
+
 export default function Custom() {
+  const [color, setColor] = useState("#b32aa9");
+
+const presetColors = ["#cd9323", "#1a53d8", "#9a2151", "#0d6416", "#8d2808"];
+
+
     return (
        <div>
        <Canvas shadows camera={{ position: [0, 0, 4], fov: 45 }}>
@@ -22,6 +31,7 @@ export default function Custom() {
        <OrbitControls minPolarAngle={Math.PI / 2} maxPolarAngle={Math.PI / 2} enableZoom={false} enablePan={false} />
        </Canvas>
        <Picker/>
+      
        </div>
       )
   }
@@ -65,15 +75,31 @@ export default function Custom() {
       </group>
     )
   }
+
+  
   
   function Picker() {
     const snap = useSnapshot(state);
-   
-    return (
-      <div style={{ display: snap.current ? "block" : "none" }}>
-       <HexColorPicker className="picker" color={snap.items[snap.current]} onChange={(color) => (state.items[snap.current] = color)} />
-        <h1 className="ColorPicker">{snap.current}</h1>
+   const presetColors = ["#cd9323", "#1a53d8", "#9a2151", "#0d6416", "#8d2808"];
 
+    return (
+      <div style={{ display: snap.current ? "block" : "none" }} className="picker2">
+       <HexColorPicker 
+       
+       color={snap.items[snap.current]} 
+       onChange={(color) => (state.items[snap.current] = color)}
+       
+        />
+        <div className="picker__swatches">
+        {presetColors.map((presetColor) => (
+          <button
+            key={presetColor}
+            className="picker__swatch"
+            style={{ background: presetColor }}
+      
+          />
+        ))}
+      </div>
   
       </div>
     )

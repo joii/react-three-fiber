@@ -245,11 +245,42 @@ button:hover {
   position: absolute !important;
   top: 74px;
   left: 30%;
-  width: 90px !important;
-  height: 90px !important;
+  width: 150px;
+  background: #f0f0f4;
+  border-radius: 9px;
 }
 
 .ColorPicker{
 
   color: black;
+}
+
+.picker2 {
+  width: 150px;
+  background: #f0f0f4;
+  border-radius: 9px;
+  position: absolute !important;
+  top: 30%;
+  left: 10%;
+}
+
+.picker2 .react-colorful {
+  width: auto;
+}
+
+.picker__swatches {
+  display: flex;
+  padding: 12px;
+  flex-wrap: wrap;
+}
+
+.picker__swatch {
+  width: 24px;
+  height: 24px;
+  margin: 4px;
+  border: none;
+  padding: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  outline: none;
 }
