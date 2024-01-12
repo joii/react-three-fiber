@@ -80,16 +80,16 @@ const presetColors = ["#cd9323", "#1a53d8", "#9a2151", "#0d6416", "#8d2808"];
   
   function Picker() {
     const snap = useSnapshot(state);
-   const presetColors = ["#cd9323", "#1a53d8", "#9a2151", "#0d6416", "#8d2808"];
+   const presetColors = ["#000000", "#1a53d8", "#9a2151", "#0d6416", "#8d2808"];
 
     return (
       <div style={{ display: snap.current ? "block" : "none" }} className="picker2">
        <HexColorPicker 
-       
+       className="react-colorful"
        color={snap.items[snap.current]} 
        onChange={(color) => (state.items[snap.current] = color)}
        
-        />
+    />
         <div className="picker__swatches">
         {presetColors.map((presetColor) => (
           <button

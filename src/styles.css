@@ -256,16 +256,22 @@ button:hover {
 }
 
 .picker2 {
-  width: 150px;
+  width: 190px;
+
   background: #f0f0f4;
   border-radius: 9px;
   position: absolute !important;
-  top: 30%;
+  bottom: 10%;
   left: 10%;
+  display: none;
 }
 
+.color-palate{
+
+}
 .picker2 .react-colorful {
   width: auto;
+  height: 80px;
 }
 
 .picker__swatches {
