@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from "react"
+import React,{ useRef, useState, useEffect } from "react"
 import { Canvas, useFrame } from "@react-three/fiber"
 import { useGLTF, ContactShadows, Environment, OrbitControls } from "@react-three/drei"
 import { HexColorPicker } from "react-colorful"
@@ -96,7 +96,7 @@ const presetColors = ["#cd9323", "#1a53d8", "#9a2151", "#0d6416", "#8d2808"];
             key={presetColor}
             className="picker__swatch"
             style={{ background: presetColor }}
-      
+            onClick={(color) => (state.items[snap.current] = presetColor)}
           />
         ))}
       </div>
