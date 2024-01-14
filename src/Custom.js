@@ -35,7 +35,7 @@ export default function Custom() {
   function Shoe() {
     const ref = useRef()
     const snap = useSnapshot(state)
-    const { nodes, materials } = useGLTF("glbf/Casual_Shoes.glb")
+    const { nodes, materials } = useGLTF("glbf/HV_Loafer_Shoe.glb")
     const [hovered, set] = useState(null)
   
     // useFrame((state) => {
@@ -71,77 +71,77 @@ export default function Custom() {
         rotation={[-0.31, 0.36, 0.11]}
       />
 
-        <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_870.geometry}
-        material={materials.Chocolate_Chocolate_Leather_Chocolate}
-        material-color={snap.items.Chocolate_Chocolate_Leather_Chocolate}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_885.geometry}
-        material={materials.Chocolate_Chocolate_Leather_Chocolate}
-        material-color={snap.items.Chocolate_Chocolate_Leather_Chocolate}
-      />
-      <mesh
-      castShadow
-      receiveShadow
-      geometry={nodes.Mesh_871.geometry}
-      material={materials.Silk09}
-      material-color={snap.items.Silk09}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_886.geometry}
-        material={materials.Silk09}
-        material-color={snap.items.Silk09}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_884.geometry}
-        material={materials.Silk21}
-        material-color={snap.items.Silk21}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_874.geometry}
-        material={materials.Silk21}
-        material-color={snap.items.Silk21}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_1_1.geometry}
-        material={materials.Muted11}
-        material-color={snap.items.Muted11}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_1_2.geometry}
-        material={materials.Muted11}
-        material-color={snap.items.Muted11}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_3_1.geometry}
-        material={materials.Muted22}
-        material-color={snap.items.Muted22}
-      />
-      <mesh
-        castShadow
-        receiveShadow
-        geometry={nodes.Mesh_3_2.geometry}
-        material={materials.Muted22}
-        material-color={snap.items.Muted22}
-      />
-      
+
+    <mesh
+    castShadow
+    receiveShadow
+    geometry={nodes.Mesh_Vamp_L.geometry}
+    material={materials.Vamp}
+    material-color={snap.items.Vamp}
+  />
+  <mesh
+    castShadow
+    receiveShadow
+    geometry={nodes.Mesh_Vamp_R.geometry}
+    material={materials.Vamp}
+    material-color={snap.items.Vamp}
+  />
+  <mesh
+    castShadow
+    receiveShadow
+    geometry={nodes.Mesh_Heel_L.geometry}
+    material={materials.Heel}
+    material-color={snap.items.Heel}
+  />
+  <mesh
+    castShadow
+    receiveShadow
+    geometry={nodes.Mesh_Heel_R.geometry}
+    material={materials.Heel}
+    material-color={snap.items.Heel}
+  />
+  <mesh
+    castShadow
+    receiveShadow
+    geometry={nodes.Mesh_Lace.geometry}
+    material={materials.Lace}
+    material-color={snap.items.Lace}
+  />
+  <mesh
+    castShadow
+    receiveShadow
+    geometry={nodes.Mesh_Lace_R.geometry}
+    material={materials.Lace}
+    material-color={snap.items.Lace}
+  />
+  <mesh
+    castShadow
+    receiveShadow
+    geometry={nodes.Mesh_Sole_L.geometry}
+    material={materials.Sole}
+    material-color={snap.items.Sole}
+  />
+  <mesh
+    castShadow
+    receiveShadow
+    geometry={nodes.Mesh_Sole_R.geometry}
+    material={materials.Sole}
+    material-color={snap.items.Sole}
+  />
+  <mesh
+    castShadow
+    receiveShadow
+    geometry={nodes.Mesh_Body_L.geometry}
+    material={materials.Body}
+    material-color={snap.items.Body}
+  />
+  <mesh
+    castShadow
+    receiveShadow
+    geometry={nodes.Mesh_Body_R.geometry}
+    material={materials.Body}
+    material-color={snap.items.Body}
+  />
        
       </group>
     )
