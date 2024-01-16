@@ -35,7 +35,7 @@ export default function CustomWhite() {
   function Shoe() {
     const ref = useRef()
     const snap = useSnapshot(state)
-    const { nodes, materials } = useGLTF("glbf/HV_Loafer_White2.glb")
+    const { nodes, materials } = useGLTF("glbf/HV_Loafer_White3.glb")
     const [hovered, set] = useState(null)
   
     useFrame((state) => {
@@ -62,10 +62,9 @@ export default function CustomWhite() {
         onPointerMissed={() => (state.current = null)}
         onClick={(e) => (e.stopPropagation(), (state.current = e.object.material.name))}
         dispose={null}
-   
         >
       
-        <mesh
+      <mesh
         castShadow
         receiveShadow
         geometry={nodes.Mesh_870.geometry}
@@ -135,7 +134,6 @@ export default function CustomWhite() {
         material={materials.Body}
         material-color={snap.items.Body}
       />
-
       </group>
     )
   }
