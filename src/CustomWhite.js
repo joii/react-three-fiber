@@ -142,16 +142,16 @@ export default function CustomWhite() {
   
   function Picker() {
     const snap = useSnapshot(state);
-   const presetColors = ["#000000", "#1a53d8", "#9a2151", "#0d6416", "#8d2808"];
+   const presetColors = ["#5e3543", "#53464d", "#c58d74", "#dcbe9c", "#cdc7c7","#f1f1e7","#27221f","#343d5e","#e5e09e","#b8c29d","#d9b4ab","#afa4c2","#64514D","#5C2A1F","#151515"];
 
     return (
       <div style={{ display: snap.current ? "block" : "none" }} className="picker2">
-       <HexColorPicker 
+      {/*} <HexColorPicker 
        className="react-colorful"
        color={snap.items[snap.current]} 
        onChange={(color) => (state.items[snap.current] = color)}
        
-    />
+    />*/}
         <div className="picker__swatches">
         {presetColors.map((presetColor) => (
           <button
