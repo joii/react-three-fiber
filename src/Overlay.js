@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import {
   AiOutlineHighlight,
   AiOutlineShopping,
@@ -7,13 +8,12 @@ import {
 import { useSnapshot } from 'valtio'
 import { state } from './store'
 import Custom from './Custom';
-
+import CustomWhite from "./CustomWhite";
 
 
 export default function Overlay() {
   const snap = useSnapshot(state)
-
-  return (
+   return (
     <div className="container">
       <header>
         <img src="/logo.png" width="80" />
@@ -67,7 +67,7 @@ function Customizer() {
 
   return (
     <div >
-      <Custom/>
+      <CustomWhite/>
       <button
       className="exit"
       style={{ background: 'black' }}
@@ -75,6 +75,7 @@ function Customizer() {
       GO BACK
       <AiOutlineArrowLeft size="1.3em" />
     </button>
+   
     </div>
   )
 }
